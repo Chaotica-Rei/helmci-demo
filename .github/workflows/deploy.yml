@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest 
+    runs-on: self-hosted  # Изменено с ubuntu-latest на self-hosted
     # Добавляем переменную окружения для принудительного использования Node.js 24
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
