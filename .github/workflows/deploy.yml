@@ -8,15 +8,13 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted  # Изменено с ubuntu-latest на self-hosted
-    # Добавляем переменную окружения для принудительного использования Node.js 24
+    runs-on: self-hosted
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repo
-        # Обновляем версию действия до последней (если доступна v5 или выше)
-        uses: actions/checkout@v5  # замените на актуальную версию, проверьте на GitHub Marketplace
+        uses: actions/checkout@v5
 
       - name: Setup kubeconfig
         run: |
