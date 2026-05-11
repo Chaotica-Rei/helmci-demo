@@ -1,4 +1,4 @@
-ame: Helm CI/CD
+name: Helm CI/CD
 
 on:
   push:
