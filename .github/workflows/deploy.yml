@@ -8,11 +8,15 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
+    # Добавляем переменную окружения для принудительного использования Node.js 24
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        # Обновляем версию действия до последней (если доступна v5 или выше)
+        uses: actions/checkout@v5  # замените на актуальную версию, проверьте на GitHub Marketplace
 
       - name: Install kubectl
         run: |
